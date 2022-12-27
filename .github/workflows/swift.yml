@@ -14,8 +14,11 @@ jobs:
       - name: Check out lokalise branch
         uses: actions/checkout@v3
         with:
-#           ref: ${{ github.event.pull_request.head.sha }}
           ref: ${{ github.head_ref }}
+          #           ref: ${{ github.event.pull_request.head.sha }}
+      - name: Pull Request
+        run: |
+            git pull
           
 #       - name: commit and push
 #       - uses: stefanzweifel/git-auto-commit-action@v4
