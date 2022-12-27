@@ -9,4 +9,5 @@ jobs:
     if:  startsWith(github.head_ref, 'lokalise')
     runs-on: ubuntu-latest
     steps:
-      - run: echo "The head of this PR starts with 'lokalise'"
+      - name: Check out lokalise branch
+        uses: actions/checkout@v3
