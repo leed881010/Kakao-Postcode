@@ -6,7 +6,7 @@ on:
       - opened
 jobs:
   run_if:
-    if:  startsWith(github.head_ref, 'releases/')
+    if:  startsWith(github.head_ref, 'lokalise')
     runs-on: ubuntu-latest
     steps:
-      - run: echo "The head of this PR starts with 'releases/'"
+      - run: echo "The head of this PR starts with 'lokalise'"
