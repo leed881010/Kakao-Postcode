@@ -3,7 +3,8 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   pull_request_target:
     types:
-      - opened
+      - reopened
+#       - opened
 jobs:
   run_if:
     if:  startsWith(github.head_ref, 'lokalise')
