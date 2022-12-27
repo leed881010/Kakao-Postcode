@@ -5,8 +5,10 @@ name: Swift
 
 on:
   pull_request:
-    types: ["opened"]
-    branches: [ "test" ]
+    types:
+    - opened
+    branches:
+    - 'releases/**'
 
 jobs:
   build:
