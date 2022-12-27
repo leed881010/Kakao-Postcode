@@ -6,7 +6,7 @@ name: Swift
 on:
   pull_request:
     types: ["opened"]
-    branches: [ "test**" ]
+    branches: [ "test" ]
 
 jobs:
   build:
