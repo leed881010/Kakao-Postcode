@@ -4,8 +4,8 @@ on:
   pull_request_target:
     types:
       - opened
-#     branches:
-#       - 'releases/**'
+    branches:
+      - 'releases/**'
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
