@@ -7,10 +7,26 @@ on:
 #       - opened
 jobs:
   run_if:
+    # Branch의 head가 'lokalise' 로 시작하는 지 체크
     if:  startsWith(github.head_ref, 'lokalise')
     runs-on: ubuntu-latest
     steps:
       - name: Check out lokalise branch
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
+#           ref: ${{ github.event.pull_request.head.sha }}
+          ref: ${{ github.head_ref }}
+          
+      - name: commit and push
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[Success] complete localization build"
+#         run: |
+#           git add .
+#           git diff
+#           git config --local user.email "email"
+#           git config --local user.name "name"
+#           git commit -m "[Success] complete localization build"
+#           git push
+
+          
