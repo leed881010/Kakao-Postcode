@@ -18,8 +18,7 @@ jobs:
         run: |
             git pull origin
       - name: Run Script
-        run: |
-          chmod +x ./scripts/localization.sh
+        run: pwd
       - name: commit and push
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
